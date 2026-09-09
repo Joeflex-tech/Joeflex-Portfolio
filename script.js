@@ -1,11 +1,16 @@
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
 
-// Load the final polish layer without changing the lightweight static setup.
 const polish = document.createElement('link');
 polish.rel = 'stylesheet';
 polish.href = 'enhancements.css';
 document.head.appendChild(polish);
+
+const favicon = document.createElement('link');
+favicon.rel = 'icon';
+favicon.type = 'image/svg+xml';
+favicon.href = 'favicon.svg';
+document.head.appendChild(favicon);
 
 const header = document.querySelector('.site-header');
 let lastScroll = 0;
